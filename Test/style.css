@@ -1,0 +1,157 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    position: relative;
+    right: 70px;
+} 
+h3 {
+    color: #333;
+}
+
+.logo {
+    width: 150px;
+    position: relative;
+    right: 50px;
+    margin: 0 5px;
+}
+.logo3 {
+    margin-left: 4em;
+    width: 150px;
+    margin: 0 5px;
+}
+.logo2 {
+    width: 100px;
+    margin: 0 5px;
+}
+
+
+.clinical-data {
+    padding: 10px;
+    margin-left: 4em;
+    margin-bottom: 0.5em;
+    margin-top: -1.5em;
+    width: 90%;
+    background-color: #b9d229;
+    border-radius: 5px;
+}
+.Serum{
+    padding: 10px;
+    height: 8vh;
+    padding-top: 1.2em;
+    background-color: #FF7C80;
+    width:35% ;
+    margin-left: 4em;
+    border-radius: 5px;
+}
+.Plasma {
+    padding: 10px;
+    height: 8vh;
+    padding-top: 1.2em;
+    background-color: #FF9900;
+    width:50% ;
+    margin-left: 4em;
+    border-radius: 5px;
+}
+.NP-OP {
+    padding: 10px;
+    height: 8vh;
+    padding-top: 1.2em;
+    background-color: #BF9000;
+    width:35% ;
+    margin-top: 0.5em;
+    margin-left: 4em;
+    border-radius: 5px
+}
+/* Progress stages */
+.stage {
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #ccc;
+
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Completed stages have a green background */
+.stage-complete {
+    background-color: #4472C4;
+}
+.stage-complete1 {
+    background-color: #43AFC0;
+}
+.stage-complete2 {
+    background-color: #45C191;
+}
+.stage-complete3 {
+    background-color: #45B451;
+}
+.stage-complete4 {
+    background-color: #70AD47;
+}
+/* Arrow style */
+.stage::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 20px solid #ccc;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+.stage-complete::after {
+    border-left-color: #4472C4;
+    
+}
+.stage-complete1::after {
+    border-left-color: #43AFC0;
+    
+}
+.stage-complete2::after {
+    border-left-color: #45C191;
+    
+}
+.stage-complete3::after {
+    border-left-color: #45B451;
+    
+}
+
+
+/* Last arrow doesn't need the right arrow */
+.stage:last-child::after {
+    display: none;
+}
+
+/* Hover effect */
+.stage:hover {
+    transform: scale(1.05);
+}
+
+/* Tick mark for completed stages */
+.tick {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    color: #28a745;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 20px;
+    border: 2px solid #28a745;
+}
